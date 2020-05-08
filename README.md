@@ -19,14 +19,16 @@ With Covid-19 becoming a pandemic the research on same has also accelerated - mo
 * It works by embedding the sentences of retrieved documents, running a clustering algorithm and finding the sentences that are closest to the cluster's centroids.
 
 ### Process Workflow ###
-* Data Preparation and Wrangling
-* Generation of embeddings for the document corpus for different techniques in ensemble approach
-* Data/Embedding Ingestion into Elasticsearch as dense vectors
-* Saving the model objects and configuration for later use
-* Generation of embeddings for user search input
-* Matching (input embeddings and document vectors) based on cosine similarity
-* Summarizing the retrieved documents using BERT summarizer
-* Displaying search results
+1. **Phase I - Data Preparation and Modelling**
+    * Data Preparation and Wrangling
+    * Generation of embeddings for the document corpus for different techniques in ensemble approach
+    * Saving the model objects and configuration for later use
+2. **Phase I - Indexing, Searching and Summarization**
+    * Data/Embedding Ingestion into Elasticsearch as dense vectors
+    * Generation of embeddings for user search input
+    * Matching (input embeddings and document vectors) based on cosine similarity
+    * Summarizing the retrieved documents using BERT summarizer
+    * Displaying search results
 
 ### Setup Elasticsearch ### 
 * Download and install Elasticsearch 7.6 from https://www.elastic.co/downloads/elasticsearch<br> 
@@ -34,7 +36,10 @@ NOTE: To use the Dense Vector and Script Score APIs, make sure you download the 
 
 ### Code Instructions ###
 * Download the dataset (metadata.csv) from https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge and place in 'data' folder
-* You must download the Bert and Scibert model and place them in a local folder called 'bin'
+* You must download the following models and place them in 'bin' folder
+    * BERT - https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers/v0.2/bert-base-nli-mean-tokens.zip
+    * SciBERT - https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/huggingface_pytorch/scibert_scivocab_uncased.tar
+* Untar the downloaded models and it will create separate folders for each mode
 * To install the required packages _(we encourage to create a virtual environment to avoid package conflicts)_, run the following command - 
     `pip install -r requirements.txt`
 * Run the jupyter notebook and navigate to code in the 'src' folder
