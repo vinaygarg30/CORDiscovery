@@ -29,9 +29,9 @@ With Covid-19 becoming a pandemic the research on same has also accelerated - mo
 * Displaying search results
 
 ### Setup Elasticsearch ### 
-* Download and install Elasticsearch 7.6 from https://www.elastic.co/downloads/elasticsearch
-<br> 
+* Download and install Elasticsearch 7.6 from https://www.elastic.co/downloads/elasticsearch<br> 
 NOTE: To use the Dense Vector and Script Score APIs, make sure you download the latest version _(stated above)_ for this implementation.
+
 ### Code Instructions ###
 * Download the dataset (metadata.csv) from https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge and place in 'data' folder
 * You must download the Bert and Scibert model and place them in a local folder called 'bin'
@@ -39,7 +39,6 @@ NOTE: To use the Dense Vector and Script Score APIs, make sure you download the 
     `pip install -r requirements.txt`
 * Run the jupyter notebook and navigate to code in the 'src' folder
 * Once you run the notebook, a flask app will be running on http://localhost:5000 and try the following sample queries:
-
     * Clinical and bench trials to investigate less common viral inhibitors against COVID-19 such as naproxen, clarithromycin, and minocycline that that may exert effects on viral replication.
     * Methods evaluating potential complication of Antibody-Dependent Enhancement (ADE) in vaccine recipients.
     * Exploration of use of best animal models and their predictive value for a human vaccine.
